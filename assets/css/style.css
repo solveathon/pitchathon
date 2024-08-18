@@ -34,6 +34,10 @@
     background-color: #162752;
 }
 
+.bg-countdown {
+    background-color: #060311;
+}
+
 .bg-primary {
     background-color: #223A7A !important;
 }
@@ -317,7 +321,7 @@ h6,
 
 @media (max-width: 991.98px) {
     .navbar .navbar-nav .nav-link {
-        margin-right: 0;
+        margin-left: 4vw;
         padding: 10px 0;
     }
 
@@ -369,9 +373,173 @@ h6,
 
 .service-item:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
+/* COUNTDOWN */
+.countdown {
+    padding-top: 152px;
+    padding-bottom: 152px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.countdown-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.caption {
+    color: #FFF;
+    font-family: "Bebas Neue";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 7.2px;
+    padding-top: 1rem;
+}
+
+.caption-1,
+.caption-2,
+.caption-3 {
+    padding-right: 3rem;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-1-1,
+.box-1-2,
+.box-2-1,
+.box-2-2,
+.box-3-1,
+.box-3-2,
+.box-4-1,
+.box-4-2 {
+    color: #fff;
+    font-family: "Staatliches";
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 8.64px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #4d0784;
+    background: #10051e;
+    display: flex;
+    width: 100px;
+    height: 120px;
+    padding: 18px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding-left: 12px;
+}
+
+.colon {
+    color: #fff;
+    font-family: "Staatliches";
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 8.64px;
+}
+
+/* COUNTDOWN */
+@media screen and (max-width: 1200px) {
+    .countdown-container {
+        transform: scale(0.8);
+    }
+
+    .countdown {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .countdown-container {
+        transform: scale(0.6);
+    }
+
+    .countdown {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .countdown-container {
+        transform: scale(0.5);
+    }
+
+    .countdown {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .countdown-container {
+        transform: scale(0.4);
+    }
+
+    .countdown {
+        height: 224px;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .countdown-container {
+        transform: scale(0.36);
+    }
+
+    .countdown {
+        height: 172px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .countdown-container {
+        transform: scale(0.3);
+    }
+
+    .countdown {
+        height: 172px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .countdown-container {
+        transform: scale(0.26);
+    }
+
+    .countdown {
+        height: 124px;
+        padding: 0;
+    }
+}
 
 
 /*** Roadmap ***/
