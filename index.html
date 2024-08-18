@@ -3,13 +3,21 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pitch-A-Thon '24 | VIT Chennai</title>
+    <title>24 Hours Challenge - Pitch-A-Thon '24</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta name="description" content="The official website of the upcoming 24 Hours Challenge - Pitch-A-Thon '24" />
+    <meta property="og:title" content="Pitch-A-Thon 24h Challenge 2024" />
+    <meta property="og:url" content="https://24hourschallenge.pitchathon.co.in/" />
+    <meta property="og:description" content="The official website of the upcoming 24 Hours Challenge - Pitch-A-Thon '24" />
+    <meta property="og:image" content="https://temp.guruprasaathm.com/assets/img/logo.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta name="theme-color" content="#223A7A">
+    <link rel="icon" type="image/x-icon" href="./assets/logo.ico">
+    <link rel="apple-touch-icon" href="./assets/logo.ico">
 
     <!-- Favicon -->
-    <link href="./assets/img/logo-min.png" rel="icon">
+    <link href="./assets/img/logo.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +44,35 @@
     <!-- Template Stylesheet -->
     <link href="./assets/css/style.css" rel="stylesheet">
     <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
-    <script>
+    <script type="text/javascript">
+        function updateCountdown() {
+          var countDownDate = new Date("Oct 1, 2024 13:00:00").getTime();
+          var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementsByClassName("box-1-1")[0].innerHTML = Math.floor(days % 100 / 10);
+            document.getElementsByClassName("box-1-2")[0].innerHTML = Math.floor(days % 10);
+
+            document.getElementsByClassName("box-2-1")[0].innerHTML = Math.floor(hours % 100 / 10);
+            document.getElementsByClassName("box-2-2")[0].innerHTML = Math.floor(hours % 10);
+
+            document.getElementsByClassName("box-3-1")[0].innerHTML = Math.floor(minutes % 100 / 10);
+            document.getElementsByClassName("box-3-2")[0].innerHTML = Math.floor(minutes % 10);
+
+            document.getElementsByClassName("box-4-1")[0].innerHTML = Math.floor(seconds % 100 / 10);
+            document.getElementsByClassName("box-4-2")[0].innerHTML = Math.floor(seconds % 10);
+
+            if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("countdown").innerHTML = "";
+            }
+          }, 1000);
+        }
         async function handleQuerySubmit(event) {
             event.preventDefault();
             const form = event.target;
@@ -82,12 +118,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-4 py-lg-0">
+                <a href="./assets/pitchathon_brochure.pdf" target="_blank" class="nav-item nav-link">Brochure</a>
                 <a href="#oc" class="nav-item nav-link">Organizers</a>
                 <a href="#timeline" class="nav-item nav-link">Timeline</a>
                 <a href="#prizes" class="nav-item nav-link">Prizes</a>
                 <a href="#sponsors" class="nav-item nav-link">Sponsors</a>
                 <!-- <a href="#gallery" class="nav-item nav-link">Gallery</a> -->
                 <a href="#team" class="nav-item nav-link">Team</a>
+                <a href="#contact" class="nav-item nav-link">Contact Us</a>
             </div>
             <div class="h-100 d-lg-inline-flex align-items-center d-none">
                 <a target="_blank" class="btn btn-square rounded-circle bg-light text-primary me-2"
@@ -102,8 +140,8 @@
     <!-- Navbar End -->
 
     <!-- Header Start -->
-    <div class="container-fluid hero-header bg-light py-5 mb-5">
-        <div class="container py-5">
+    <div class="container-fluid hero-header bg-light mb-5">
+        <div class="container py-4">
 
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 animated fadeIn">
@@ -111,8 +149,8 @@
                         src="./assets/img/landing1.svg" alt="">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-4 mb-3 animated slideInDown">PITCH-A-THON</h1>
-                    <p class="animated slideInDown">A 24 hour hackathon for brilliant minds to pitch and demonstrate their exciting ideas in a reputed platform, and win exciting cash prizes and further recognition! The Hackathon will involve teams of 4-6 conceptualising and materialising an innovating business idea - draft up a business plan, develop a website/app and possibly a prototype, after which they must produce an attracting advertisement and exhibit their project at an expo.</p>
+                    <h1 class="display-4 mb-3 animated slideInDown">24 Hours Challenge</h1>
+                    <p class="animated slideInDown">A 24 hour hackathon conducted as part of the Pitch-a-thon event, for brilliant minds to pitch and demonstrate their exciting ideas in a reputed platform, and win exciting cash prizes and further recognition! The Hackathon will involve teams of 4-6 conceptualising and materialising an innovating business idea - draft up a business plan, develop a website/app and possibly a prototype, after which they must produce an attracting advertisement and exhibit their project at an expo.</p>
                     <div class="apply-button" data-hackathon-slug="pitch-a-thon" data-button-theme="light"
                         style="height: 44px; width: 312px">
                     </div>
@@ -128,79 +166,45 @@
         </div>
     </div>
 
-    <!-- VIT Chennai Start -->
-    <!-- <div class="container-xxl py-5" id="about">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid" src="./assets/img/vit.webp" alt="">
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="h-100">
-                        <h1 class="display-6">VIT Chennai</h1>
-                        <p>Established in 1984, Vellore Institute of Technology stands as a prominent engineering
-                            institution in India. Its mission revolves around delivering top-notch education, fostering
-                            technical expertise, analytical prowess, and instilling profound ethical principles in its
-                            students.</p>
-                    </div>
-                </div>
+        <!-- <div class="container-l my-5" style="background-color: #060311;">
+            <div id="countdown">
+               <div class="countdown">
+                  <div class="countdown-container">
+                     <div class="days-container cont">
+                        <div class="box-1 box">
+                           <div class="box-1-1">?</div>
+                           <div class="box-1-2">?</div>
+                           <p class="colon">:</p>
+                        </div>
+                        <p class="caption-1 caption">DAYS</p>
+                     </div>
+                     <div class="hours-container cont">
+                        <div class="box-2 box">
+                           <div class="box-2-1">?</div>
+                           <div class="box-2-2">?</div>
+                           <p class="colon">:</p>
+                        </div>
+                        <p class="caption-2 caption">HOURS</p>
+                     </div>
+                     <div class="minutes-container cont">
+                        <div class="box-3 box">
+                           <div class="box-3-1">?</div>
+                           <div class="box-3-2">?</div>
+                           <p class="colon">:</p>
+                        </div>
+                        <p class="caption-3 caption">MINUTES</p>
+                     </div>
+                     <div class="seconds-container cont">
+                        <div class="box-4 box">
+                           <div class="box-4-1">?</div>
+                           <div class="box-4-2">?</div>
+                        </div>
+                        <p class="caption-4 caption">SECONDS</p>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div><hr> -->
-    <!-- VIT Chennai End -->
-
-    <!-- Hostel Commitee Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="h-100">
-                        <h1 class="display-6">Hostel Committee</h1>
-                        <p>The Hostel Committee of VIT Chennai is always ready to cater to the needs of the students to
-                            ease their lives far from the comfort of their own homes. At any time of the day or night,
-                            at least one or two staff members are on duty to cater to emergencies in the respective
-                            hostel. The hostel committee is sponsoring the complete event. Refreshments and meals during
-                            the event will also be served by the hostel committee.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid" src="./assets/img/hostel.jpeg" alt="">
-                </div>
-
-            </div>
-        </div>
-    </div><hr> -->
-    <!-- Hostel Commitee End -->
-
-    <!-- V-Nest Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid" src="./assets/img/v-nest.jpg" alt="">
-                </div>
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="h-100">
-                        <h1 class="display-6">V-NEST</h1>
-                        <p>VIT Chennai has a vibrant eco system for innovations including Incubation we have two
-                            incubation center to support students, faculty members for converting their startup ideas
-                            into startups with faculty members from each school to coordinate the innovation and Startup
-                            activities. VIT Social Business Incubator is started in the year 2017 funded by the British
-                            Council in association with Cambridge Judge Business School UK and V-NEST started in the
-                            year 2020 supported by the institute.</p>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-    </div> -->
-    <!-- V-Nest End -->
+        </div> -->
 
     <!-- Organizing Clubs Start -->
         <div class="container-xxl bg-light py-5 my-5" id="oc">
@@ -296,125 +300,48 @@
     <!-- Organizing Clubs End -->    
 
     <!-- Organizers Start -->
-    <div class="container-xxl bg-light py-5 my-5" id="organizers">
+    <div class="container-l bg-light py-5 my-5" id="organizers">
         <div class="container py-5">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-6">Organizing Partners</h1>
                 <p class="text-primary fs-5 mb-5"></p>
             </div>
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp text-center" data-wow-delay="0.1s">
-                    <div class="service-item bg-white p-5">
-                        <img class="img-fluid mb-4" src="./assets/img/organizers/vitlogo.png" alt="" height="142px"
-                            width="142px" style="max-width: 30vh; margin: 4vh">
+                <div class="col-lg-3 col-md-6 wow fadeInUp text-center" data-wow-delay="0.1s">
+                    <div class="service-item bg-white p-5" onclick="window.open('https://chennai.vit.ac.in/');">
+                        <img class="img-fluid mb-4" src="./assets/img/organizers/vitlogo.jpg" alt="" height="142px"
+                            width="142px">
                         <h5 class="mb-3">VIT Chennai</h5>
-                        <p>Established in 1984, Vellore Institute of Technology stands as one of the most prominent engineering
-                            institutions in India. Its mission revolves around delivering top-notch education, fostering
-                            technical expertise, analytical prowess, and instilling profound ethical principles in its
-                            students. The administration regularly hosts and supports exciting hackathons to foster a creative spirit
-                            amongst its students and encourage co-curricular activities.</p>
+                        <p>One of the most prominent and premier engineering institutions in India</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp text-center" data-wow-delay="0.3s">
-                    <div class="service-item bg-white p-5">
+                <div class="col-lg-3 col-md-6 wow fadeInUp text-center" data-wow-delay="0.3s">
+                    <div class="service-item bg-white p-5" onclick="window.open('https://www.linkedin.com/in/v-nest-vit-c');">
                         <img class="img-fluid mb-4" src="./assets/img/organizers/v-nest.jpg" alt="" height="142px"
                             width="142px">
                         <h5 class="mb-3">V-NEST</h5>
-                        <p>VIT Chennai has a vibrant eco system for innovations including Incubation we have two
-                            incubation center to support students, faculty members for converting their startup
-                            ideas into startups with faculty members from each school to coordinate the innovation
-                            and Startup activities. VIT Social Business Incubator is started in the year 2017 funded
-                            by the British Council in association with Cambridge Judge Business School UK and V-NEST
-                            started in the year 2020 supported by the institute.</p>
+                        <p>V-Nest has aided in startup incubation for VIT Chennai since 2020</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp text-center" data-wow-delay="0.5s">
-                    <div class="service-item bg-white p-5">
-                        <img class="img-fluid mb-4" src="./assets/img/organizers/EE0vCMfVAAA_Lxj.png" alt=""
+                <div class="col-lg-3 col-md-6 wow fadeInUp text-center" data-wow-delay="0.3s">
+                    <div class="service-item bg-white p-5" onclick="window.open('https://chennai.vit.ac.in/campus/students-welfare-council/');">
+                        <img class="img-fluid mb-4 my-3" src="./assets/img/organizers/swc.jpg" alt="" height="142px" width="142px">
+                        <h5 class="mb-3">Office of Students Welfare</h5>
+                        <p>The Office of Student Welfare is a supportive pillar of the student community</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp text-center" data-wow-delay="0.5s">
+                    <div class="service-item bg-white p-5" onclick="window.open('https://iic.mic.gov.in/');">
+                        <img class="img-fluid mb-4 my-1" src="./assets/img/organizers/iic.jpg" alt=""
                             height="142px" width="142px">
                         <h5 class="mb-3">Institution's Innovation Council</h5>
-                        <p>
-                            The Institution's Innovation Council (IIC) is an initiative by the Government of India,
-                            under the Ministry of Education, to foster innovation and entrepreneurship among
-                            educational institutions. It aims to create a culture of innovation and entrepreneurship
-                            within colleges and universities across the country.
-
-                            The primary objective of IIC is to encourage, inspire, and nurture young minds to think
-                            creatively and come up with innovative solutions to real-world problems.</p>
+                        <p>An initiative by the GOI to foster innovation and entrepreneurship</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Organizers End -->
-
-    <!-- Themes Start -->
-
-    <!-- <div class="container-xxl bg-light py-5 my-5" id="themes">
-        <div class="container py-5">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6">Themes</h1>
-                <p class="text-primary fs-5 mb-5">Think, Create, Innovate!</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-white p-5">
-                        <img class="img-fluid mb-4" src="./assets/img/hostel.png" alt="" height="75px" width="75px">
-                        <h5 class="mb-3">Hostel Hurdles</h5>
-                        <p>Offer comprehensive solutions to improve safety and security within hostel premises, while
-                            also designing systems or apps to track and reduce food wastage in dining facilities thus
-                            promoting cost savings.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-white p-5">
-                        <img class="img-fluid mb-4" src="./assets/img/union.png" alt="" height="75px" width="75px">
-                        <h5 class="mb-3">Students' Welfare</h5>
-                        <p>Facilitate cultural exchange and diversity appreciation among hostel residents through
-                            events, workshops, or online platforms promoting intercultural understanding.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-white p-5">
-                        <img class="img-fluid mb-4" src="./assets/img/leaf.png" alt="" height="75px" width="75px">
-                        <h5 class="mb-3">Campus Sustainability</h5>
-                        <p>Develop eco-friendly hostel solutions: reduce energy, promote recycling, implement
-                            sustainability. Optimize water/electricity for cost savings, environmental health.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-white p-5">
-                        <img class="img-fluid mb-4" src="./assets/img/students.png" alt="" height="75px" width="75px">
-                        <h5 class="mb-3">Students' Wellbeing</h5>
-                        <p>Create solutions to assist students in their career development and financial management
-                            needs, mentorship programs, skill-building workshops, budgeting apps, and peer-to-peer
-                            lending platforms.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-white p-5">
-                        <img class="img-fluid mb-4" src="./assets/img/healthcare.png" alt="" height="75px"
-                            width="75px">
-                        <h5 class="mb-3">Healthcare Solutions</h5>
-                        <p>Offer services or products aimed at promoting physical and mental well-being among hostel
-                            residents, such as fitness programs, mindfulness workshops, or healthy meal options.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-white p-5">
-                        <img class="img-fluid mb-4" src="./assets/img/bulb.png" alt="" height="75px" width="75px">
-                        <h5 class="mb-3">Open Innovation</h5>
-                        <p>Voice your challenges and bring forth your own solutions. Engage in collaborative
-                            problem-solving to address issues directly affecting your living or academic environment.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Themes End -->
-
     <!-- Timeline Start -->
     <div id="timeline">
         <div class="container-xxl py-5">
@@ -1271,7 +1198,7 @@
     <!-- Team End -->
 
     <!-- Contact Start -->
-    <div class="container-xxl d-inline-flex px-0 pt-5 mt-4" id="contact">
+    <div class="container-xxl d-inline-flex px-0 py-5 mt-4" id="contact">
         <img class="img-fluid d-none d-lg-block" src="./assets/img/support2.jpg" alt="" width="500px" height="500px"></img>
         <div class="container wow fadeInUp pb-5 pb-sm-5" data-wow-delay="0.1s">
             <div class="text-center mx-auto" style="max-width: 500px;">
