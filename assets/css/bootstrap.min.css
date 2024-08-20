@@ -49,8 +49,8 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #999;
-    background-color: #fff;
+    color: #fff;
+    background-color: #111;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
@@ -84,7 +84,7 @@ h6,
     font-family: "Kanit", sans-serif;
     font-weight: 700;
     line-height: 1.2;
-    color: #111
+    color: #fff
 }
 
 h1,
